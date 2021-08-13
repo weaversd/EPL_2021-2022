@@ -62,5 +62,5 @@ for (i in 1:nrow(scores_df)) {
 }
 
 #get team list
-team_list <- unique(scores_df$Home)
+team_list <- sort(unique(scores_df$Home))
 

@@ -43,24 +43,12 @@ scores_df$Winner <- NA
 scores_df$Loser <- NA
 scores_df$Draw <- NA
 
-#populate winners and losers
-for (i in 1:nrow(scores_df)) {
-  if(!is.na(scores_df$H_score[i]) & (scores_df$H_score[i] == scores_df$A_score[i])){
-    scores_df$Winner[i] <- "Draw"
-    scores_df$Loser[i] <- "Draw"
-    scores_df$Draw[i] <- T
-  } else if (!is.na(scores_df$H_score[i]) & (scores_df$H_score[i] != scores_df$A_score[i])){
-    scores_df$Draw[i] <- F
-    if (scores_df$H_score[i] > scores_df$A_score[i]){
-      scores_df$Winner[i] <- scores_df$Home[i]
-      scores_df$Loser[i] <- scores_df$Away[i]
-    } else {
-      scores_df$Winner[i] <- scores_df$Away[i]
-      scores_df$Loser[i] <- scores_df$Home[i]
-    }
-  }
-}
+#populate wins and losses
+scores_df <- populate_wins_losses(scores_df)
 
 #get team list
 team_list <- sort(unique(scores_df$Home))
+
+#real time table
+current_table <- create_table()
 

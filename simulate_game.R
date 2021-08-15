@@ -1,6 +1,6 @@
 simulate_game <- function(team_H, team_A) {
   #import offensive and defensive SPI rankings, with 20% boost for home team offense
-  team_H_off <- as.numeric(SPI_df[SPI_df$Name == team_H,]$Off) * 1.20
+  team_H_off <- as.numeric(SPI_df[SPI_df$Name == team_H,]$Off) * home_field_advantage
   team_H_def <- as.numeric(SPI_df[SPI_df$Name == team_H,]$Def)
   
   team_A_off <- as.numeric(SPI_df[SPI_df$Name == team_A,]$Off)

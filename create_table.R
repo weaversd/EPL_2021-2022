@@ -8,15 +8,15 @@ subset_by_team <- function(team, df = scores_df) {
 #create table
 create_table <- function(df = scores_df) {
   #set variables to empty to start
-  Team <- rep("", 20)
-  GP <- rep(0, 8)
-  W <- rep(0, 8)
-  L <- rep(0, 8)
-  D <- rep(0, 8)
-  Pts <- rep(0, 8)
-  GF <- rep(0, 8)
-  GA <- rep(0, 8)
-  GD <- rep(0, 8)
+  Team <- rep("", teams_n)
+  GP <- rep(0, teams_n)
+  W <- rep(0, teams_n)
+  L <- rep(0, teams_n)
+  D <- rep(0, teams_n)
+  Pts <- rep(0, teams_n)
+  GF <- rep(0, teams_n)
+  GA <- rep(0, teams_n)
+  GD <- rep(0, teams_n)
   counter <- 1
   
   #loop through each team

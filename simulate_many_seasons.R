@@ -4,7 +4,7 @@ simulate_n_seasons <- function(iterations = 10) {
   print(paste0("simulating ", iterations, " seasons..."), quote = F)
   print("[----------]", quote = F)
   teams_results <- list()
-  for (j in 1:20){
+  for (j in 1:teams_n){
     teams_results[[j]] <- data.frame()
   }
   
@@ -41,7 +41,7 @@ simulate_n_seasons <- function(iterations = 10) {
     season_results <- simulate_season()
     
     #bind all of the results for one team together
-    for (j in 1:20){
+    for (j in 1:teams_n){
       teams_results[[j]] <- rbind(teams_results[[j]], season_results[season_results$Team == team_list[j],])
     }
     
@@ -51,7 +51,7 @@ simulate_n_seasons <- function(iterations = 10) {
   print("compiling...", quote = F)
   
   #create a summary dataframe
-  summary_dataframe <- data.frame(matrix(ncol = 13, nrow = 20))
+  summary_dataframe <- data.frame(matrix(ncol = 13, nrow = teams_n))
   
   #rename columns
   names <- c("Team", "GP", "W", "L", "D", "Pts", "GF",
@@ -59,7 +59,7 @@ simulate_n_seasons <- function(iterations = 10) {
   colnames(summary_dataframe) <- names
   
   #for each team summarise. Average statistics, and count top4 finishes, top finishes, and relegations
-  for(j in 1:20) {
+  for(j in 1:teams_n) {
     team_df <- teams_results[[j]]
     summary_dataframe$Team[j] <- team_df$Team[1]
     summary_dataframe$GP[j] <- mean(team_df$GP)

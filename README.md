@@ -22,6 +22,7 @@ Setup workspace:
 Create the table:
 * set_up_final_table.R
 
+When doing this, make sure you run the variables at the top of "Run.R", as they are used in the other files.
 
 ##Sources 
 

@@ -1,4 +1,4 @@
-#number of simulations (can change this... 100 takes about 20 seconds):
+#number of simulations (can change this... 1000 takes about 3 minutes):
 simulated_seasons <- 1000
 
 #home field advantage (multiplied by the home teams offense. default is 1.2)

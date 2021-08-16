@@ -1,12 +1,12 @@
 # EPL_2021-2022
 
-Easiest way to run: 
+## Easiest way to run: 
 * Ensure that all the files are in your working directory.
 * Open "Run.R" and highlight everything and run it.
 * Enjoy  
 
 
-If you want to run the files individually, do it in this order:  
+## If you want to run the files individually, do it in this order:  
 
 Functions first:  
 * populate_wins_losses.R
@@ -24,7 +24,7 @@ Create the table:
 
 When doing this, make sure you run the variables at the top of "Run.R", as they are used in the other files.
 
-##Sources 
+## Sources 
 
 SPI scores come from [fivethirtyeight](https://projects.fivethirtyeight.com/soccer-predictions/premier-league/)  
 

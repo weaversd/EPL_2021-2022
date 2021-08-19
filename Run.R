@@ -50,3 +50,8 @@ webshot(url,
 #Save SPI tables as CSV document
 write.table(SPI_df, paste0("SPI_tables/Matchweek_", current_matchday, "_SPI.csv"),
             sep = ",", row.names = F)
+
+#save current table as CSV document
+current_table_output <- subset(current_table, select = -(Pos_trend))
+write.table(current_table_output, paste0("current_table_output/Matchweek_", current_matchday, "_table.csv"),
+            sep = ",", row.names = F)

@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 #number of simulations (can change this... 1000 takes about 3 minutes):
 simulated_seasons <- 1000
 
@@ -14,6 +16,8 @@ library(stringi)
 library(stringr)
 library(formattable)
 library(sparkline)
+library(htmltools)
+library(webshot) 
 
 #Create Functions
 source("create_table.R")
@@ -33,3 +37,11 @@ source("set_up_final_table.R")
 
 #Display table
 show(table_out)
+
+#Save table as png in the table_output folder
+path <- html_print(table_out, background = "white", viewer = NULL)
+url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
+webshot(url,
+        file = paste0("table_output/Matchweek_", current_matchday, "_EPL_table_", Sys.Date(), ".png"),
+        selector = ".formattable_widget",
+        delay = 0.2)

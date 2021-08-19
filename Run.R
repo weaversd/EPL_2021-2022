@@ -18,6 +18,7 @@ library(formattable)
 library(sparkline)
 library(htmltools)
 library(webshot) 
+library(SortableHTMLTables)
 
 #Create Functions
 source("create_table.R")
@@ -42,6 +43,10 @@ show(table_out)
 path <- html_print(table_out, background = "white", viewer = NULL)
 url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
 webshot(url,
-        file = paste0("table_output/Matchweek_", current_matchday, "_EPL_table_", Sys.Date(), ".png"),
+        file = paste0("table_output/Matchweek_", current_matchday, "_EPL_table.png"),
         selector = ".formattable_widget",
         delay = 0.2)
+
+#Save SPI tables as CSV document
+write.table(SPI_df, paste0("SPI_tables/Matchweek_", current_matchday, "_SPI.csv"),
+            sep = ",", row.names = F)

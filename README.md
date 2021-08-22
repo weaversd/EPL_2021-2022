@@ -1,8 +1,11 @@
 # EPL_2021-2022
 
+## Example Output:
+![test](table_output/Matchweek_2_EPL_table.png)
+
 ## Easiest way to run: 
 * Ensure that all the files are in your working directory.
-* Open "Run.R" and highlight everything and run it.
+* Open "Run.R", highlight everything and run it.
 * Enjoy  
 
 

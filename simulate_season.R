@@ -13,3 +13,4 @@ simulate_season <- function(df = scores_df){
   return(simulated_table)
 }
 
+

@@ -18,7 +18,7 @@ library(formattable)
 library(sparkline)
 library(htmltools)
 library(webshot) 
-library(SortableHTMLTables)
+
 
 #Create Functions
 source("create_table.R")

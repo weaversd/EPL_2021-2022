@@ -4,6 +4,7 @@ SPI_html <- html_nodes(SPI, '#forecast-table div')
 SPI_text <- html_text(SPI_html)
 SPI_text <- stri_remove_empty(SPI_text)
 SPI_text <- str_remove_all(SPI_text, "[0-9]* pts")
+SPI_text <- str_remove_all(SPI_text, "[0-9]* pt")
 
 #convert to a dataframe and rename columns
 SPI_matrix <- matrix(SPI_text, ncol = 5, byrow = T)

@@ -38,8 +38,10 @@ simulate_n_seasons <- function(iterations = 10) {
     } else if (count == ninety) {
       print("[*********-]", quote = F)
     }
-    season_results <- simulate_season()
     
+
+    season_results <- simulate_season()
+
     #bind all of the results for one team together
     for (j in 1:teams_n){
       teams_results[[j]] <- rbind(teams_results[[j]], season_results[season_results$Team == team_list[j],])

@@ -1,5 +1,7 @@
 #!/usr/bin/env Rscript
 
+setwd("~/Personal_projects/EPL_2021-2022")
+
 #number of simulations (can change this... 1000 takes about 3 minutes):
 simulated_seasons <- 1000
 

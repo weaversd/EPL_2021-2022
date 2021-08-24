@@ -31,7 +31,7 @@ When doing this, make sure you run the variables at the top of "Run.R", as they 
 
 SPI scores come from [fivethirtyeight](https://projects.fivethirtyeight.com/soccer-predictions/premier-league/)  
 
-Scores and schedule comes from [fbref](https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures)  
+Scores and schedule come from [fbref](https://fbref.com/en/comps/9/schedule/Premier-League-Scores-and-Fixtures)  
 
 Prediction model is based on the method by [fivethirtyeight](https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/)
 

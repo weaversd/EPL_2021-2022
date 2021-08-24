@@ -90,7 +90,7 @@ for (j in 1:teams_n) {
   current_team <- current_table$Team[j]
   #for each team, make a sparkline with position data from inv_positions
   sparklines[j] <- as.character(htmltools::as.tags(sparkline(inv_positions[[current_team]], type = "line",
-                                                             chartRangeMin = 0.8, chartRangeMax = 20,
+                                                             chartRangeMin = 0.8, chartRangeMax = 20.1,
                                                              fillColor = FALSE,
                                                              minSpotColor = "",
                                                              maxSpotColor = "",

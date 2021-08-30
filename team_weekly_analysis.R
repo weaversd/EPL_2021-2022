@@ -42,10 +42,10 @@ create_team_plot <- function(TEAM) {
           axis.text = element_text(size = 20),
           axis.title = element_text(size = 20),
           legend.key.width = unit(1.5,"cm"),
-          plot.title = element_text(size = 20)) +
+          plot.title = element_text(size = 90)) +
     scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
     labs(x = "Week", y = "Normalized units OR %",
-         title = paste0(TEAM, " stats by week")) +
+         title = paste0(TEAM)) +
     scale_y_continuous(breaks = c(0,1)) +
     scale_color_manual(values = c("blue", "blue4",
                                   "darkgreen", "red4", "orange",

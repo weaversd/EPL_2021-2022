@@ -31,14 +31,24 @@ colors <- data.frame(row.names = team_list, color = color_list)
 #   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 # test
 
+
+
+
 #add colors to the table
 weekly_table$color <- NA
 for (i in 1:nrow(weekly_table)) {
   weekly_table$color[i] <- colors[weekly_table$Team[i],]
 }
 
+#get current order of teams
+current_team_order <- current_table$Team
+current_color_order <- rep(NA, teams_n)
+for (i in 1:teams_n) {
+  current_color_order[i] <- colors[current_team_order[i],]
+}
+
 #keep the order consistent
-weekly_table$color <- factor(weekly_table$color, levels = color_list)
+weekly_table$color <- factor(weekly_table$color, levels = current_color_order)
 
 #make the position plot
 position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
@@ -51,7 +61,7 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_y_reverse(breaks = 1:20) +
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -61,7 +71,8 @@ position_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pos)) +
         panel.grid.minor.y = element_blank(),
         legend.text = element_text(size = 20),
         axis.text = element_text(size = 20),
-        axis.title = element_text(size = 20)) +
+        axis.title = element_text(size = 20),
+        legend.key.height = unit(1, "cm")) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Position", title = "2021-2022 EPL table position by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
@@ -73,12 +84,15 @@ show(position_plot)
 dev.off()
 
 
+#keep the order consistent alphebetically for the remaining plots
+#weekly_table$color <- factor(weekly_table$color, levels = color_list)
+
 #make a percent UCL plot
 UCL_plot <- ggplot(data = weekly_table, aes(x = matchday, y = UCL_pct)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_y_continuous(breaks = seq(0,100,10), limits = c(0,100))+
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -101,7 +115,7 @@ relegation_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Relegated_p
   geom_line(aes(color = color), size = 1.5) +
   scale_y_continuous(breaks = seq(0,100,10), limits = c(0,100))+
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -123,7 +137,7 @@ title_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Prem_Title_pct))
   geom_line(aes(color = color), size = 1.5) +
   scale_y_continuous(breaks = seq(0,100,10), limits = c(0,100))+
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -144,7 +158,7 @@ dev.off()
 points_plot <- ggplot(data = weekly_table, aes(x = matchday, y = Pts)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -166,7 +180,7 @@ dev.off()
 GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -188,7 +202,7 @@ dev.off()
 GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -210,7 +224,7 @@ dev.off()
 GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
   geom_line(aes(color = color), size = 1.5) +
   scale_color_identity(guide = "legend",
-                       labels = team_list) +
+                       labels = current_team_order) +
   theme_bw() +
   theme(legend.title = element_blank(),
         legend.position = "right", 
@@ -230,5 +244,7 @@ dev.off()
 
 #run the by team weekly analysis
 source("team_weekly_analysis.R")
+source("create_facet_grid_team_pdf.R")
+
 
 

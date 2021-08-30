@@ -2,30 +2,13 @@
 
 ## Example Output:
 ![test](table_output/Matchweek_3_EPL_table.png)
+![test2](weekly_analysis/position_by_week.png)
+![test3](weekly_analysis/weekly_team_plots/Chelsea_by_week.png)
 
 ## Easiest way to run: 
 * Ensure that all the files are in your working directory.
 * Open "Run.R", highlight everything and run it.
 * Enjoy  
-
-
-## If you want to run the files individually, do it in this order:  
-
-Functions first:  
-* populate_wins_losses.R
-* create_table.R
-* simulate_game.R
-* simulate_season.R
-* simulate_many_seasons.R
-
-Setup workspace:  
-* import_SPI.R
-* import_scores_and_schedule.R
-
-Create the table:
-* set_up_final_table.R
-
-When doing this, make sure you run the variables at the top of "Run.R", as they are used in the other files.
 
 ## Sources 
 

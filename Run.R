@@ -45,13 +45,22 @@ source("set_up_final_table.R")
 #Display table
 show(table_out)
 
-#Save table as png in the table_output folder
+#Save table as png in the table_output folder for posterity
 path <- html_print(table_out, background = "white", viewer = NULL)
 url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
 webshot(url,
         file = paste0("table_output/Matchweek_", current_matchday, "_EPL_table.png"),
         selector = ".formattable_widget",
         delay = 0.2)
+
+#update the current file:
+path <- html_print(table_out, background = "white", viewer = NULL)
+url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
+webshot(url,
+        file = paste0("table_output/current_EPL_table.png"),
+        selector = ".formattable_widget",
+        delay = 0.2)
+
 
 #Save SPI tables as CSV document
 write.table(SPI_df, paste0("SPI_tables/Matchweek_", current_matchday, "_SPI.csv"),

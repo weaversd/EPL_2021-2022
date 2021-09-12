@@ -1,7 +1,7 @@
 # EPL_2021-2022
 
 ## Example Output:
-![test](table_output/Matchweek_3_EPL_table.png)
+![test](table_output/current_EPL_table.png)
 ![test2](weekly_analysis/position_by_week.png)
 ![test3](weekly_analysis/weekly_team_plots/Chelsea_by_week.png)
 

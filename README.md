@@ -1,20 +1,33 @@
 # EPL_2021-2022
 
-## Example Output:
+## Source Code: 
+[https://github.com/weaversd/EPL_2021-2022](https://github.com/weaversd/EPL_2021-2022)
+
+
+## Table:
 ![test](table_output/current_EPL_table.png)
+
+## Plots:
 ![test2](weekly_analysis/position_by_week.png)
+Chance of UCL qualification (finishing in the top 4)
 ![test3](weekly_analysis/UCL_chance_by_week.png)
+Chance of winning the Premier league (finishing in position 1)
 ![test3](weekly_analysis/title_chance_by_week.png)
+Chance of being relegated (finishing in the bottom 3)
 ![test3](weekly_analysis/relegation_chance_by_week.png)
-![test3](weekly_analysis/goal_differential_by_week.png)
+Points per week
 ![test3](weekly_analysis/points_by_week.png)
+Goal differential
+![test3](weekly_analysis/goal_differential_by_week.png)
+Each team individual analysis
 ![test3](weekly_analysis/all_team_weekly_stats.png)
+
+## Example team analysis
 ![test3](weekly_analysis/weekly_team_plots/Chelsea_by_week.png)
 
 ## Easiest way to run: 
 * Ensure that all the files are in your working directory.
 * Open "Run.R", highlight everything and run it.
-* Enjoy  
 
 ## Sources 
 

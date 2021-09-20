@@ -10,17 +10,17 @@ by: Simon Weaver
 
 ## Plots:
 ![test2](weekly_analysis/position_by_week.png)
-Chance of UCL qualification (finishing in the top 4)
+### Chance of UCL qualification (finishing in the top 4)
 ![test3](weekly_analysis/UCL_chance_by_week.png)
-Chance of winning the Premier league (finishing in position 1)
+### Chance of winning the Premier league (finishing in position 1)
 ![test3](weekly_analysis/title_chance_by_week.png)
-Chance of being relegated (finishing in the bottom 3)
+### Chance of being relegated (finishing in the bottom 3)
 ![test3](weekly_analysis/relegation_chance_by_week.png)
-Points per week
+### Points per week
 ![test3](weekly_analysis/points_by_week.png)
-Goal differential
+### Goal differential
 ![test3](weekly_analysis/goal_differential_by_week.png)
-Each team individual analysis
+### Each team individual analysis
 ![test3](weekly_analysis/all_team_weekly_stats.png)
 
 ## Example team analysis

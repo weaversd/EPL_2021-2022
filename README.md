@@ -1,4 +1,5 @@
-# EPL_2021-2022
+# Premier League 2021-22 Results and Visualization
+by: Simon Weaver
 
 ## Source Code: 
 [https://github.com/weaversd/EPL_2021-2022](https://github.com/weaversd/EPL_2021-2022)

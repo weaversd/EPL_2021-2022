@@ -7,6 +7,7 @@
 ![test3](weekly_analysis/relegation_chance_by_week.png)
 ![test3](weekly_analysis/goal_differential_by_week.png)
 ![test3](weekly_analysis/points_by_week.png)
+![test3](weekly_analysis/all_team_weekly_stats.pdf)
 ![test3](weekly_analysis/weekly_team_plots/Chelsea_by_week.png)
 
 ## Easiest way to run: 

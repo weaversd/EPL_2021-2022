@@ -1,6 +1,7 @@
 #import the schedule with dates and teams from fbref.com
 schedule <- read_html("https://fbref.com/en/comps/9/schedule/Premier-League-schedule-and-Fixtures")
-schedule_html <- html_nodes(schedule, 'th.right , .left:nth-child(3) a, .left:nth-child(9) a, .right a')
+#schedule_html <- html_nodes(schedule, 'th.right , .left:nth-child(3) a, .left:nth-child(9) a, .right a')
+schedule_html <- html_nodes(schedule, '.left:nth-child(3) a , .left:nth-child(7) a, .right a, th.right')
 schedule_text <- html_text(schedule_html)
 schedule_text <- stri_remove_empty(schedule_text)
 

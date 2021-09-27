@@ -1,7 +1,10 @@
 #Set your home directory below:
 working_directory <- "~/Personal_projects/EPL_2021-2022/"
-
 setwd(working_directory)
+
+#test the import
+source("import_test.R")
+import_test()
 
 #number of simulations (can change this... 1000 takes about 3 minutes):
 simulated_seasons <- 1000

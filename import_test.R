@@ -1,6 +1,9 @@
 #test if import is working:
 #ensure that import is working properly:
 
+library(htmltools)
+library(rvest)
+library(stringi)
 
 import_test <- function() {
   #import the schedule with dates and teams from fbref.com

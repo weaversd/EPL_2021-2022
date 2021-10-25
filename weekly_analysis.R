@@ -189,7 +189,7 @@ GD_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GD)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
+  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 2)) +
   labs(x = "Week", y = "Goal Differential", title = "2021-2022 EPL goal differential by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()

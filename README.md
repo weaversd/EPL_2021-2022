@@ -20,6 +20,12 @@ by: Simon Weaver
 ![test3](weekly_analysis/points_by_week.png)
 ### Goal differential
 ![test3](weekly_analysis/goal_differential_by_week.png)
+### Goals scored
+![test](weekly_analysis/goals_scored_by_week.png)
+### Goals against
+![test](weekly_analysis/goals_against_by_week.png)
+### SPI rating (via fivethirtyeight)
+![test](weekly_analysis/SPI_rating_by_week.png)
 ### Each team individual analysis
 ![test3](weekly_analysis/all_team_weekly_stats.png)
 

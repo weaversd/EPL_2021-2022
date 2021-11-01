@@ -9,7 +9,7 @@ if (nrow(played_games) == 0) {
   current_matchday <- 1
 } else {
   #determine the matchday
-  current_matchday <- as.numeric(max(played_games$Matchday))
+  current_matchday <- max(as.numeric((played_games$Matchday)))
 }
 
 #set up a list to store results for each matchday

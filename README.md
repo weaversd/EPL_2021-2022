@@ -30,13 +30,13 @@ by: Simon Weaver
 ![test3](weekly_analysis/all_team_weekly_stats.png)
 
 ## Example team analysis
-![test3](weekly_analysis/weekly_team_plots/Chelsea_by_week.png)
+![test3](weekly_analysis/weekly_team_plots/Arsenal_by_week.png)
 
 ## Easiest way to run: 
 * Ensure that all the files are in your working directory.
 * Open "Run.R", highlight everything and run it.
 
-## Sources 
+## Sources  
 
 SPI scores come from [fivethirtyeight](https://projects.fivethirtyeight.com/soccer-predictions/premier-league/)  
 

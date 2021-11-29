@@ -215,7 +215,7 @@ GF_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GF)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
+  scale_y_continuous(limits = c(0,NA), breaks = function(x) seq(ceiling(x[1])+1, floor(x[2]), by = 2)) +
   labs(x = "Week", y = "Goals scored", title = "2021-2022 EPL goals scored by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()
@@ -237,7 +237,7 @@ GA_plot <- ggplot(data = weekly_table, aes(x = matchday, y = GA)) +
         axis.text = element_text(size = 20),
         axis.title = element_text(size = 20)) +
   scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
-  scale_y_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
+  scale_y_continuous(breaks = function(x) seq(ceiling(x[1])+1, floor(x[2]), by = 1)) +
   labs(x = "Week", y = "Goals against", title = "2021-2022 EPL goals against by week") +
   geom_point(aes(fill = color), size = 3, shape = 21, stroke = 0.5) +
   scale_fill_identity()

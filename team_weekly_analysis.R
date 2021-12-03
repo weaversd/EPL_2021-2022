@@ -46,7 +46,7 @@ create_team_plot <- function(TEAM) {
     scale_x_continuous(breaks = function(x) seq(ceiling(x[1]), floor(x[2]), by = 1)) +
     labs(x = "Week", y = "Normalized units OR %",
          title = paste0(TEAM)) +
-    scale_y_continuous(breaks = c(0,1)) +
+    scale_y_continuous(breaks = c(0,1), limits = c(0,1)) +
     scale_color_manual(values = c("blue", "blue4",
                                   "darkgreen", "red4", "orange",
                                   "lightgreen", "hotpink", "skyblue",

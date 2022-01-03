@@ -51,7 +51,12 @@ scores_df$Draw <- NA
 score_import <- read_html("https://fbref.com/en/comps/9/schedule/Premier-League-schedule-and-Fixtures")
 score_import_html <- html_nodes(score_import, 'td.center')
 score_import_text <- html_text(score_import_html)
-score_import_text <- score_import_text[-(seq(11,417,11))]
+#score_import_text <- score_import_text[-(seq(11,417,11))]
+score_import_text <- score_import_text[-c(11,22,33,44,55,66,77,88,99,110,
+                                          121,132,143,154,165,176, 187,195,206,
+                                          217,228,232,243,254,265,276,287,
+                                          298,309,320,331,342,353,364,375,386,
+                                          397,408)]
 is.na(score_import_text) <- score_import_text == ""
 
 score_import_text <- str_replace_all(score_import_text, pattern = "[^0-9]", "~")

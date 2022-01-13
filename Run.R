@@ -2,6 +2,18 @@
 working_directory <- "~/Personal_projects/EPL_2021-2022/"
 setwd(working_directory)
 
+#packages
+library(rvest)
+library(stringi)
+library(stringr)
+library(formattable)
+library(sparkline)
+library(htmltools)
+library(webshot) 
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
 #test the import
 source("import_test.R")
 import_test()
@@ -15,18 +27,6 @@ home_field_advantage <- 1.20
 #global variables (don't change)
 teams_n <- 20
 matchweeks_total <- 38
-
-#packages
-library(rvest)
-library(stringi)
-library(stringr)
-library(formattable)
-library(sparkline)
-library(htmltools)
-library(webshot) 
-library(dplyr)
-library(tidyr)
-library(ggplot2)
 
 
 #Create Functions

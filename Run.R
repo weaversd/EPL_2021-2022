@@ -3,13 +3,13 @@ working_directory <- "~/Personal_projects/EPL_2021-2022/"
 setwd(working_directory)
 
 #packages
+library(sparkline)
+library(htmltools)
+library(webshot) 
 library(rvest)
 library(stringi)
 library(stringr)
 library(formattable)
-library(sparkline)
-library(htmltools)
-library(webshot) 
 library(dplyr)
 library(tidyr)
 library(ggplot2)

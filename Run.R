@@ -4,6 +4,7 @@ setwd(working_directory)
 
 #packages
 library(sparkline)
+library(xfun)
 library(htmltools)
 library(webshot) 
 library(rvest)
